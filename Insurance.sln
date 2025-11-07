@@ -13,12 +13,48 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commom", "Commom", "{526557
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PremiumCalculator", "PremiumCalculator", "{3F6D2CBB-3491-44B4-AB4E-69570F04D112}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{FDE15BDF-7299-4030-BF1A-8F3E60600CAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremiumCalculator.Domain", "BackendServices\PremiumCalculator\PremiumCalculator.Domain\PremiumCalculator.Domain.csproj", "{8AD29AB6-E07A-4879-8D08-716C26BFB681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremiumCalculator.Application", "BackendServices\PremiumCalculator\PremiumCalculator.Application\PremiumCalculator.Application.csproj", "{ED0E2F94-E589-4624-8598-AC83304D7111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremiumCalculator.Infrastructure", "BackendServices\PremiumCalculator\PremiumCalculator.Infrastructure\PremiumCalculator.Infrastructure.csproj", "{BCF5FADF-DA18-4409-A1BD-F2EFE6FD9352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremiumCalculator.API", "BackendServices\PremiumCalculator\PremiumCalculator.API\PremiumCalculator.API.csproj", "{0DEB0B16-3F7D-4E22-B1FB-F368D8958C59}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AD29AB6-E07A-4879-8D08-716C26BFB681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD29AB6-E07A-4879-8D08-716C26BFB681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD29AB6-E07A-4879-8D08-716C26BFB681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD29AB6-E07A-4879-8D08-716C26BFB681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0E2F94-E589-4624-8598-AC83304D7111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0E2F94-E589-4624-8598-AC83304D7111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0E2F94-E589-4624-8598-AC83304D7111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0E2F94-E589-4624-8598-AC83304D7111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF5FADF-DA18-4409-A1BD-F2EFE6FD9352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF5FADF-DA18-4409-A1BD-F2EFE6FD9352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF5FADF-DA18-4409-A1BD-F2EFE6FD9352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF5FADF-DA18-4409-A1BD-F2EFE6FD9352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DEB0B16-3F7D-4E22-B1FB-F368D8958C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DEB0B16-3F7D-4E22-B1FB-F368D8958C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DEB0B16-3F7D-4E22-B1FB-F368D8958C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DEB0B16-3F7D-4E22-B1FB-F368D8958C59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3F6D2CBB-3491-44B4-AB4E-69570F04D112} = {05475B61-3C42-425A-9D92-9EA01960CCFC}
+		{8AD29AB6-E07A-4879-8D08-716C26BFB681} = {3F6D2CBB-3491-44B4-AB4E-69570F04D112}
+		{ED0E2F94-E589-4624-8598-AC83304D7111} = {3F6D2CBB-3491-44B4-AB4E-69570F04D112}
+		{BCF5FADF-DA18-4409-A1BD-F2EFE6FD9352} = {3F6D2CBB-3491-44B4-AB4E-69570F04D112}
+		{0DEB0B16-3F7D-4E22-B1FB-F368D8958C59} = {3F6D2CBB-3491-44B4-AB4E-69570F04D112}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7079F35B-066D-4946-A69E-9ABE388C741F}
