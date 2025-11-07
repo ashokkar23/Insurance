@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackendServices", "BackendServices", "{05475B61-3C42-425A-9D92-9EA01960CCFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontendServices", "FrontendServices", "{CD521A84-53F9-4E7D-A576-A2C55E301C61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateways", "APIGateways", "{52C5D53C-E430-420A-8D66-DCF33DB4A01E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commom", "Commom", "{526557D3-2931-49F2-9E72-82F56302AE6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PremiumCalculator", "PremiumCalculator", "{3F6D2CBB-3491-44B4-AB4E-69570F04D112}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F6D2CBB-3491-44B4-AB4E-69570F04D112} = {05475B61-3C42-425A-9D92-9EA01960CCFC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7079F35B-066D-4946-A69E-9ABE388C741F}
+	EndGlobalSection
+EndGlobal
