@@ -31,6 +31,22 @@ namespace PremiumCalculator.API.Controllers
             }
             
         }
-        
+
+        [HttpGet]
+        public IActionResult GetOccupationList()
+        {
+            try
+            {
+
+                var occupations = _premiumCalculatorService.GetOccupationList();
+                return Ok(occupations);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }       
+
     }
 }

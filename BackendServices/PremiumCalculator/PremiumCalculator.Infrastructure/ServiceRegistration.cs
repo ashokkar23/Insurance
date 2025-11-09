@@ -28,12 +28,16 @@ namespace PremiumCalculator.Infrastructure
 
             //Register Repositories
             services.AddScoped<IPremiumCalculatorRepository, PremiumCalculatorRepository>();
+            services.AddScoped<IOccupationRepository, OccupationRepository>();
 
             //Register other infrastructure services as needed
             services.AddScoped<IPremiumCalculatorService, PremiumCalculatorService>();
+            
 
             services.AddAutoMapper(cfg => cfg.AddProfile<MemberMappers>());
+            services.AddAutoMapper(cfg => cfg.AddProfile<OccupationMappers>());
         }
-
     }
+
+    
 }

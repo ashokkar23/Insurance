@@ -10,5 +10,6 @@ namespace PremiumCalculator.Application.Services.Abstractions
     public interface  IPremiumCalculatorService
     {
         decimal CalculatePremium(MemberDTO member);
+        IEnumerable<OccupationDTO> GetOccupationList();
     }
 }

@@ -7,9 +7,12 @@ content-type: application/json
      "Name": "John Doe",    
      "DateOfBirth": "1990-01-11",
      "AgeNextBirthDay": "35",
-     "OccupationId": "1", 
+     "OccupationId": "2", 
      "Occupation": "Doctor",
      "SumInsured": "50000"
 }
+
+
+
 
 ###
