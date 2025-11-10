@@ -15,8 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PremiumCalculator", "Premiu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{FDE15BDF-7299-4030-BF1A-8F3E60600CAC}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Users\ashok\OneDrive\Documents\Implementation Clarification.docx = ..\..\Users\ashok\OneDrive\Documents\Implementation Clarification.docx
-		..\..\Users\ashok\OneDrive\Documents\Premium Calculator DatabaseSchema.docx = ..\..\Users\ashok\OneDrive\Documents\Premium Calculator DatabaseSchema.docx
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremiumCalculator.Domain", "BackendServices\PremiumCalculator\PremiumCalculator.Domain\PremiumCalculator.Domain.csproj", "{8AD29AB6-E07A-4879-8D08-716C26BFB681}"
