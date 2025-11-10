@@ -1,0 +1,17 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/PremiumCalculator/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5222
+        }
+      ],
+      "UpstreamPathTemplate": "/premiumcalculator/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    }
+  ]  
+
+}

@@ -1,0 +1,59 @@
+﻿@model InsureApp.web.Models.MemberModel
+
+@{
+    ViewData["Title"] = "PremiumCalculator";
+}
+
+<h1>Premium Calculator</h1>
+
+<h4>Member Details</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CalculatePremium">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MemberId" class="control-label"></label>
+                <input asp-for="MemberId" class="form-control" />
+                <span asp-validation-for="MemberId" class=""></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AgeNextBirthDay" class="control-label"></label>
+                <input asp-for="AgeNextBirthDay" class="form-control" />
+                <span asp-validation-for="AgeNextBirthDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OccupationId" class="control-label"></label>
+                <input asp-for="OccupationId" class="form-control" />
+                <span asp-validation-for="OccupationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SumInsured" class="control-label"></label>
+                <input asp-for="SumInsured" class="form-control" />
+                <span asp-validation-for="SumInsured" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            <label>Monthly Premium</label>
+            <span class="col-sm-10">
+                <b>@ViewBag.Premium</b>
+             </span>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
