@@ -49,7 +49,7 @@ public partial class PremiumCalculatorDbContext : DbContext
 
             entity.ToTable("Occupation");
 
-            entity.Property(e => e.Occupation1)
+            entity.Property(e => e.OccupationName)
                 .IsRequired()
                 .HasMaxLength(25)
                 .HasColumnName("Occupation");

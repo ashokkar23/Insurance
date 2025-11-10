@@ -22,8 +22,10 @@ namespace PremiumCalculator.API.Controllers
             try
             {
               
-                var premium = _premiumCalculatorService.CalculatePremium(member);
-                return Ok(premium);
+                decimal premium = _premiumCalculatorService.CalculatePremium(member);
+                member.MonthlyPremium = premium;
+
+                return Ok(member);
             }
             catch (Exception ex)
             {

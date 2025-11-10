@@ -24,15 +24,17 @@ namespace InsureApp.web.Models
 
 
         public int Id { get; set; }
-
+        [StringLength(50, ErrorMessage = "Name cannot be longer than 50 characters.")]
         public string Name { get; set; }
 
         public DateOnly DateOfBirth { get; set; }
-
+        [Required(ErrorMessage = "Age is required.")]
         public byte AgeNextBirthDay { get; set; }
 
         public int OccupationId { get; set; }
+        [Required(ErrorMessage = "SumInsured is required.")]
+        public decimal SumInsured { get; set; }        
 
-        public decimal SumInsured { get; set; }
+        public decimal? MonthlyPremium { get; set; } 
     }
 }

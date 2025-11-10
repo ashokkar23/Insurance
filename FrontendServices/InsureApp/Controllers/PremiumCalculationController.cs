@@ -2,6 +2,7 @@
 using InsureApp.web.HttpClients;
 using InsureApp.web.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace InsureApp.web.Controllers
 {
@@ -20,14 +21,28 @@ namespace InsureApp.web.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult CalculatePremium(MemberModel model)
+        public async Task<IActionResult> CalculatePremiumAsync(MemberModel model)
         {
             if(ModelState.IsValid)
             {
                 try
                 {
-                    var premium = _premiumCalculationServiceClient.GetPremiumAsync(model).Result;
-                    ViewBag.Premium = premium;
+                    //var response = _premiumCalculationServiceClient.GetPremiumAsync(model).Result;
+                    //ViewBag.Premium = premium;
+
+                    var responseModels = await _premiumCalculationServiceClient.GetPremiumAsync(model);
+
+                    if (responseModels != null)
+                    {
+
+                        model.MonthlyPremium = responseModels.MonthlyPremium;
+                    }
+                    else
+                    {
+                        throw new Exception("Error calculating premium: Returned member data is null.");
+                    }
+                    // var products = await _catalogServiceClient.GetProducts();
+                    // return View(model);
                     //return RedirectToAction( "DisplayPremium", "PremiumCalculation");                    
                 }
                 catch(Exception ex)
@@ -37,7 +52,7 @@ namespace InsureApp.web.Controllers
                 }
             }
 
-            return View();
+            return View(model);
         }
 
         public IActionResult DisplayPremium()

@@ -9,7 +9,7 @@ public partial class Occupation
 {
     public int Id { get; set; }
 
-    public string Occupation1 { get; set; }
+    public string OccupationName { get; set; }
 
     public int RatingId { get; set; }
 

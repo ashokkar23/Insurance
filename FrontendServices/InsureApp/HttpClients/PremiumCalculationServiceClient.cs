@@ -26,17 +26,29 @@ namespace InsureApp.web.HttpClients
             return null;
         }
 
-        public async Task<HttpResponseMessage> GetPremiumAsync(MemberModel model)
+
+        
+        public async Task<MemberModel> GetPremiumAsync(MemberModel model)
         {
-            var response = await _httpClient.PostAsJsonAsync("PremiumCalculator/CalculatePremium",model);
-            if(!response.IsSuccessStatusCode)
+            HttpResponseMessage response = await _httpClient.PostAsJsonAsync("PremiumCalculator/CalculatePremium",model);
+            if (!response.IsSuccessStatusCode)
             {
                 var errorMessage = await response.Content.ReadAsStringAsync();
                 throw new Exception($"Error calculating premium: {errorMessage}");
             }
-            
-                return response;
-        }
+            else
+            {
+                //var result = await response.Content.ReadFromJsonAsync<PremiumRequest>();
+                //model.Premium = result.Premium;
 
+                string content = await response.Content.ReadAsStringAsync();
+                return JsonSerializer.Deserialize<MemberModel>(content, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+                
+            }
+        }
+        
     }
 }

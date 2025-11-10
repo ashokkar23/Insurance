@@ -9,7 +9,7 @@ namespace PremiumCalculator.Application.Mappers
         {
             CreateMap<Occupation, OccupationDTO>()
                  .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
-                 .ForMember(dest => dest.Occupation, opt => opt.MapFrom(src => src.Occupation1))
+                 .ForMember(dest => dest.Occupation, opt => opt.MapFrom(src => src.OccupationName))
                 .ForMember(dest => dest.Rating, opt => opt.MapFrom(src => src.Rating));
         }
     }

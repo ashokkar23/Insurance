@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,10 +18,15 @@ namespace PremiumCalculator.Application.DTOs
 
         public byte AgeNextBirthDay { get; set; }
 
+        //public string Occupation { get; set; }
         public int OccupationId { get; set; }
 
         public decimal SumInsured { get; set; }
-       
-        //public string  Occupation { get; set; }
+
+        public decimal? MonthlyPremium { get; set; } = 0;
+
+
     }
+
+
 }
