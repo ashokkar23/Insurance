@@ -21,7 +21,13 @@ namespace PremiumCalculator.API.Controllers
         {
             try
             {
-              
+                var passKey = Request.Headers["X-PassKey"].FirstOrDefault();
+                var validPassKey = "Passkey@1234567890"; // This should ideally come from a secure configuration source
+                if (string.IsNullOrEmpty(passKey) || passKey != validPassKey)
+                {
+                    return Unauthorized("Invalid or missing PassKey.");
+                }
+
                 decimal premium = _premiumCalculatorService.CalculatePremium(member);
                 member.MonthlyPremium = premium;
 

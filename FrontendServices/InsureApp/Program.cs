@@ -13,7 +13,7 @@ builder.Services.AddScoped<PremiumCalculationServiceClient>(provider =>
 {
     var httpclientFactory = provider.GetRequiredService<IHttpClientFactory>();
     var client = httpclientFactory.CreateClient("HttpClient");
-    return new PremiumCalculationServiceClient(client);
+    return new PremiumCalculationServiceClient(client, builder.Configuration);
 });
 
 var app = builder.Build();
