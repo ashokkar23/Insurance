@@ -1,10 +1,11 @@
 @PremiumCalculator.API_HostAddress = http://localhost:5222/api
 
-POST {{PremiumCalculator.API_HostAddress}}/PremiumCalculator/CalculatePremium
+POST {{PremiumCalculator.API_HostAddress}}/premiumCalculator/CalculatePremium
 Accept: application/json
+X-PassKey: Passkey@1234567890
 content-type: application/json
 {
-     "Name": "John Doe",    
+     "Name": "John Doe",     
      "DateOfBirth": "1990-01-11",
      "AgeNextBirthDay": "35",
      "OccupationId": "2", 

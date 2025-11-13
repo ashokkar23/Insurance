@@ -9,9 +9,8 @@
           "Port": 5222
         }
       ],
-      "UpstreamPathTemplate": "/premiumcalculator/{everything}",
+      "UpstreamPathTemplate": "/PremiumCalculator/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     }
-  ]  
-
+  ]
 }
